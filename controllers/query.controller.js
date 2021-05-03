@@ -5,6 +5,7 @@ controller.getQuery1 = async (req, res) => {
     try {
         let result = await queries.query1();
         console.log(result);
+        console.log(result);
         res.status(200).json({
             ok: true,
             result
