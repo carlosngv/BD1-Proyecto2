@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 
 
-app.use('/queriess', router);
+app.use('/q', router);
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public/index.html'));
 });
