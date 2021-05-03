@@ -113,12 +113,13 @@ queries.query6 = () => {
 queries.query7 = () => {
   return new Promise((resolve, reject) => {
     pool.query(`
-    select p.nombre, a.nombre, i.nombre from profesional p
+    select p.nombre as profesional, a.nombre as area, i.nombre as invento from profesional p
     inner join profe_area pa on pa.id_profesional = p.id
     inner join ar a on a.id = pa.id_area
     inner join asigna_invento ai on ai.id_profesional = p.id
     inner join invento i on i.id = ai.id_invento
     where a.nombre = "Òptica";
+
     `, (err, res) => {
       if(err) {
         reject(err)
