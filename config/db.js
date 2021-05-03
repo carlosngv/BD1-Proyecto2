@@ -1,13 +1,14 @@
 const mysql = require('mysql')
 
 const pool = mysql.createPool({
-  connectionLimit: 10,
+  connectionLimit: 100,
   password: '7Dejunio',
   user: 'root',
   database: 'proyecto2',
   host: '34.68.87.90',
   port: '3306',
-  multipleStatements: true
+  multipleStatements: true,
+  debug: false
 });
 
 const queries = {}
