@@ -6,7 +6,7 @@ const pool = mysql.createPool({
   database: 'proyecto2',
   host: '34.68.87.90',
   multipleStatements: true,
-  connectTimeout: 30000
+  connectTimeout: 100000
 });
 
 const queries = {}
