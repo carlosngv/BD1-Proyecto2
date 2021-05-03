@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 
 
-app.use('/q', router);
+app.use('/r', router);
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public/index.html'));
 });
