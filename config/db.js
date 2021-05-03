@@ -6,6 +6,7 @@ const pool = mysql.createPool({
   database: 'proyecto2',
   host: '34.68.87.90',
   multipleStatements: true,
+  connectTimeout: 30000
 });
 
 const queries = {}
@@ -24,6 +25,7 @@ queries.query1 = () => {
       if(err) {
         reject(err)
       }
+      pool.end();
       return resolve(res);
     });
   });
